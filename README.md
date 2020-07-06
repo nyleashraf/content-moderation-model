@@ -1,2 +1,6 @@
 # content-moderation-model
-Building web application that can take user-uploaded image data and return classification from deep learning model trained on offensive, suggestive, and neutral image data 
+Building web application that can take user-uploaded image data and return classification from deep learning model trained on offensive, suggestive, and neutral image data.
+
+Currently, I have a working front-end that can take image uploads and save them into a folder within my local Flask environment. This connection between the front-end and back-end will allow me to query my trained model and return the image file and its classification to the front-end web application. In addition, I have processed 98,999 image files for input into the pre-trained Resnet-34 neural network (with custom dense layers), and have trained the model on a sample of image files. Due to a class imbalance (low number of suggestive images), the model does not generalize well. Going forward, I will either: (a) look for additional sources of data to even out the class distribution, or (b) utilize data augmentation techniques to artificially increase the number of images in the suggestive class. In additon, I plan to train different model architectures -- maybe a simpler solution will suffice for this image classification problem.
+
+Image files scraped using scripts from the following Github repository: https://github.com/alex000kim/nsfw_data_scraper
